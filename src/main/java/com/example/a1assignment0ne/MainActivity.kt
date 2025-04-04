@@ -23,14 +23,15 @@ class MainActivity : AppCompatActivity() {
         val submitButton = findViewById<Button>(R.id.submitButton)
 
 
-        // Set click listener for submit button
+        // Set click listener for reset button
         resetButton.setOnClickListener {
             timeInput.text.clear() // Clears the text
 
-
+            // set click listener for submit button
             submitButton.setOnClickListener {
                 val timeInput = timeInput.text.toString().trim().toLowerCase()
 
+             // images of different food suggestions
                 when (timeInput) {
                     "morning" -> {
                         ImageView.setImageResource(R.drawable.breakfast2)
